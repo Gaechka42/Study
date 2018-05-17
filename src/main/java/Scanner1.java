@@ -1,3 +1,4 @@
+// сканер
 import java.util.Scanner;
 
 public class Scanner1 {

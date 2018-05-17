@@ -1,3 +1,4 @@
+// применение значений типа boolean
 public class BlockTest {
     public static void main(String[] args) {
         int x, y;

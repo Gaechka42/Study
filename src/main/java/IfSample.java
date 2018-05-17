@@ -1,3 +1,4 @@
+//условный оператор if
 public class IfSample {
     public static void main(String[] args) {
         int x, y;

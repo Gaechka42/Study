@@ -1,32 +1,40 @@
 class DZK {
     public static void main(String[] args) {
 
-        int kir[][] = new int[5][5];
+        int size = (int) (Math.random() * 9);
+        int kir[][] = new int[size][size];
         int i, j, k = 0;
 
-        for (i = 0; i < 5; i++) {
-            for (j = 0; j < 5; j++) {
+        int sum = 0;
+        int sum2 = 0;
+
+        for (i = 0; i < size; i++) {
+            for (j = 0; j < size; j++) {
                 kir[i][j] = k;
                 k++;
                 kir [i][j] = (int) (Math.random() * 9);
                 System.out.print(kir[i][j] + " ");
+                sum = sum + kir [i][i];
+                sum2 = sum2 + kir [size - i - 1][i];
             }
             System.out.println();
         }
-        int sum = 0;
-        for (i = 0; i < 5; i++) {
-            sum = sum + kir [i][i];
-        }
+//        int sum = 0;
+//        for (i = 0; i < size; i++) {
+//            sum = sum + kir [i][i];
+//        }
+
+
+//        int sum2 = 0;
+//        for (i = 0; i < size; i++) {
+//            sum2 = sum2 + kir [size - i - 1][i];
+//        }
+
+        int sum3 = sum + sum2;
         System.out.println("Сумма главной диагонали = " + sum);
-
-        int sum2 = 0;
-        for (i = 0; i < 5; i++) {
-            sum2 = sum2 + kir [5 - i - 1][i];
-        }
-        System.out.println("Сумма побочной диагонали - " + sum2);
-
+        System.out.println("Сумма побочной диагонали = " + sum2);
+        System.out.println("Сумма диагоналей = " + sum3);
     }
 }
-
 
 
